@@ -1,0 +1,7 @@
+{
+  "extends": "..",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "jsx": "react-jsx"
+  }
+}
