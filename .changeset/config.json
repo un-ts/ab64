@@ -3,7 +3,7 @@
   "changelog": [
     "@changesets/changelog-github",
     {
-      "repo": "un-ts/lib-boilerplate"
+      "repo": "un-ts/ab64"
     }
   ],
   "commit": false,

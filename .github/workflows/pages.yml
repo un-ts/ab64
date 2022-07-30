@@ -1,4 +1,4 @@
-name: Release
+name: Deploy GitHub Pages
 
 on:
   push:
@@ -6,15 +6,11 @@ on:
       - main
 
 jobs:
-  release:
-    name: Release
+  deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repo
         uses: actions/checkout@v3
-        with:
-          # This makes Actions fetch all Git history so that Changesets can generate changelogs with the correct commits
-          fetch-depth: 0
 
       - name: Setup pnpm
         uses: pnpm/action-setup@v2
@@ -30,13 +26,17 @@ jobs:
       - name: Install Dependencies
         run: pnpm i
 
-      - name: Create Release Pull Request or Publish to npm
-        uses: changesets/action@v1
+      - name: Build Docs
+        run: yarn docs:build
+
+      - name: Add misc files
+        run: |
+          touch dist/.nojekyll
+          echo ab64.js.org > dist/CNAME
+
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@v4
         with:
-          publish: pnpm release
-          version: pnpm run version
-          commit: 'chore: release ab64'
-          title: 'chore: release ab64'
+          folder: dist
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}

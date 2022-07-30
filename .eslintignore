@@ -3,4 +3,5 @@ dist
 lib
 CHANGELOG.md
 /pnpm-lock.yaml
+!/.github
 !/.*.cjs

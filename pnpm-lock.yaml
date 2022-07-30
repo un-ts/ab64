@@ -14,8 +14,9 @@ specifiers:
   '@types/react-dom': ^18.0.6
   '@types/web': ^0.0.70
   c8: ^7.12.0
+  cross-env: ^7.0.3
+  edge-runtime: 1.1.0-beta.23
   github-markdown-css: ^5.1.0
-  lib-boilerplate: link:.
   react: ^18.2.0
   react-dom: ^18.2.0
   react-router-dom: ^6.3.0
@@ -44,8 +45,9 @@ devDependencies:
   '@types/react-dom': 18.0.6
   '@types/web': 0.0.70
   c8: 7.12.0
+  cross-env: 7.0.3
+  edge-runtime: 1.1.0-beta.23
   github-markdown-css: 5.1.0
-  lib-boilerplate: 'link:'
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
   react-router-dom: 6.3.0_biqbaboplfbrettd7655fr4n2y
@@ -2500,6 +2502,20 @@ packages:
     dependencies:
       postcss: 8.4.14
       postcss-selector-parser: 6.0.10
+    dev: true
+
+  /@edge-runtime/format/1.1.0-beta.23:
+    resolution: {integrity: sha512-TuY7ywLzp2XQQZpM8cX1dzm2QMK2juvtpMVR8K61utL2qvokzJ4gBYLcPSKhH0EWAt4WwgymNVRX0cpdSLAqAg==}
+    dev: true
+
+  /@edge-runtime/primitives/1.1.0-beta.23:
+    resolution: {integrity: sha512-0vHcZZwyxjmw/so9irYtA82/+nAlJRs+1WpRYBx7iae1FOGCPM4BIKEmboWmwTuj7c6avz9kIbptokdMUPgV9A==}
+    dev: true
+
+  /@edge-runtime/vm/1.1.0-beta.23:
+    resolution: {integrity: sha512-XBp3rCuX4scJVOo2KconAotL5XGX3zdd8IkfDNr5VVSQ/B6HkiTNuf+EvzSQTpplF+fiyLTpfcP9EbNLibwLTA==}
+    dependencies:
+      '@edge-runtime/primitives': 1.1.0-beta.23
     dev: true
 
   /@es-joy/jsdoccomment/0.31.0:
@@ -5528,6 +5544,11 @@ packages:
       through2: 4.0.2
     dev: true
 
+  /convert-hrtime/3.0.0:
+    resolution: {integrity: sha512-7V+KqSvMiHp8yWDuwfww06XleMWVVB9b9tURBx+G7UTADuo5hYPuowKloz4OzOqbPezxgo+fdQ1522WzPG4OeA==}
+    engines: {node: '>=8'}
+    dev: true
+
   /convert-source-map/1.8.0:
     resolution: {integrity: sha512-+OQdjP49zViI/6i7nIJpA8rAl4sV/JdPfU9nZs3VqOwGIgizICvuN2ru6fMd+4llL0tar18UYJXfZ/TWtmhUjA==}
     dependencies:
@@ -5609,6 +5630,14 @@ packages:
 
   /create-require/1.1.1:
     resolution: {integrity: sha512-dcKFX3jn0MpIaXjisoRvexIJVEKzaq7z2rZKxf+MSr9TkdmHmsU4m2lcLojrj/FHl8mk5VxMmYA+ftRkP/3oKQ==}
+    dev: true
+
+  /cross-env/7.0.3:
+    resolution: {integrity: sha512-+/HKd6EgcQCJGh2PSjZuUitQBQynKor4wrFbRg4DtAgS1aWO+gU52xpH7M9ScGgXSYmAVS9bIJ8EzuaGw0oNAw==}
+    engines: {node: '>=10.14', npm: '>=6', yarn: '>=1'}
+    hasBin: true
+    dependencies:
+      cross-spawn: 7.0.3
     dev: true
 
   /cross-spawn/5.1.0:
@@ -6309,6 +6338,21 @@ packages:
 
   /eastasianwidth/0.2.0:
     resolution: {integrity: sha512-I88TYZWc9XiYHRQ4/3c5rjjfgkjhLyW2luGIheGERbNQ6OY7yTybanSpDXZa8y7VUP9YmDcYa+eyq4ca7iLqWA==}
+    dev: true
+
+  /edge-runtime/1.1.0-beta.23:
+    resolution: {integrity: sha512-A7dO/Y+4UJnaxFcdz6pepL+0GcvvViWvf201oFQXepgdSxPDKiqxaayCag0eiirQ6OfF+cSTmPD3xrfEoAIjiQ==}
+    hasBin: true
+    dependencies:
+      '@edge-runtime/format': 1.1.0-beta.23
+      '@edge-runtime/vm': 1.1.0-beta.23
+      exit-hook: 2.2.1
+      http-status: 1.5.2
+      mri: 1.2.0
+      picocolors: 1.0.0
+      pretty-bytes: 5.6.0
+      pretty-ms: 7.0.1
+      time-span: 4.0.0
     dev: true
 
   /ee-first/1.1.1:
@@ -7599,6 +7643,11 @@ packages:
       pify: 2.3.0
     dev: true
 
+  /exit-hook/2.2.1:
+    resolution: {integrity: sha512-eNTPlAD67BmP31LDINZ3U7HSF8l57TxOY2PmBJ1shpCvpnxBF93mWCE8YHBnXs8qiUZJc9WDcWIeC3a2HIAMfw==}
+    engines: {node: '>=6'}
+    dev: true
+
   /expand-tilde/2.0.2:
     resolution: {integrity: sha512-A5EmesHW6rfnZ9ysHQjPdJRni0SRar0tjtG5MNtm9n5TUvsYU8oozprtRD4AqHxcZWWlVuAmQo2nWKfN9oyjTw==}
     engines: {node: '>=0.10.0'}
@@ -8707,6 +8756,11 @@ packages:
       requires-port: 1.0.0
     transitivePeerDependencies:
       - debug
+    dev: true
+
+  /http-status/1.5.2:
+    resolution: {integrity: sha512-HzxX+/hV/8US1Gq4V6R6PgUmJ5Pt/DGATs4QhdEOpG8LrdS9/3UG2nnOvkqUpRks04yjVtV5p/NODjO+wvf6vg==}
+    engines: {node: '>= 0.4.0'}
     dev: true
 
   /human-id/1.0.2:
@@ -11683,6 +11737,11 @@ packages:
       lines-and-columns: 2.0.3
     dev: true
 
+  /parse-ms/2.1.0:
+    resolution: {integrity: sha512-kHt7kzLoS9VBZfUsiKjv43mr91ea+U05EyKkEtqp7vNbHxmaVuEqN7XxeEVnGrMtYOAxGrDElSi96K7EgO1zCA==}
+    engines: {node: '>=6'}
+    dev: true
+
   /parse-node-version/1.0.1:
     resolution: {integrity: sha512-3YHlOa/JgH6Mnpr05jP9eDG254US9ek25LyIxZlDItp2iJtwyaXQb57lBYLdT3MowkUFYEV2XXNAYIPlESvJlA==}
     engines: {node: '>= 0.10'}
@@ -12929,6 +12988,13 @@ packages:
     dependencies:
       lodash: 4.17.21
       renderkid: 3.0.0
+    dev: true
+
+  /pretty-ms/7.0.1:
+    resolution: {integrity: sha512-973driJZvxiGOQ5ONsFhOF/DtzPMOMtgC11kCpUrPGMTgqp2q/1gwzCquocrN33is0VZ5GFHXZYMM9l6h67v2Q==}
+    engines: {node: '>=10'}
+    dependencies:
+      parse-ms: 2.1.0
     dev: true
 
   /proc-log/2.0.1:
@@ -15801,6 +15867,13 @@ packages:
 
   /thunky/1.1.0:
     resolution: {integrity: sha512-eHY7nBftgThBqOyHGVN+l8gF0BucP09fMo0oO/Lb0w1OF80dJv+lDVpXG60WMQvkcxAkNybKsrEIE3ZtKGmPrA==}
+    dev: true
+
+  /time-span/4.0.0:
+    resolution: {integrity: sha512-MyqZCTGLDZ77u4k+jqg4UlrzPTPZ49NDlaekU6uuFaJLzPIN1woaRXCbGeqOfxwc3Y37ZROGAJ614Rdv7Olt+g==}
+    engines: {node: '>=10'}
+    dependencies:
+      convert-hrtime: 3.0.0
     dev: true
 
   /timed-out/4.0.1:

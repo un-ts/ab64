@@ -1,5 +1,5 @@
 {
-  "name": "lib-boilerplate-docs",
+  "name": "ab64-docs",
   "type": "commonjs",
-  "description": "A simple library boilerplate."
+  "description": "The smallest and fastest Base64 implementation in JavaScript"
 }

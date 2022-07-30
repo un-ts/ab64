@@ -1,9 +1,9 @@
 {
-  "name": "lib-boilerplate",
-  "version": "0.0.2",
+  "name": "ab64",
+  "version": "0.0.0",
   "type": "module",
-  "description": "A simple library boilerplate.",
-  "repository": "git+https://github.com/un-ts/lib-boilerplate.git",
+  "description": "The smallest and fastest Base64 implementation in JavaScript",
+  "repository": "git+https://github.com/un-ts/ab64.git",
   "author": "JounQin (https://www.1stG.me) <admin@1stg.me>",
   "donate": {
     "recipients": [
@@ -62,10 +62,11 @@
     "postversion": "pnpm i --no-frozen-lockfile",
     "prepare": "simple-git-hooks",
     "prerelease": "pnpm build",
-    "prevercel-build": "pnpm build",
     "release": "changeset publish",
     "serve": "sirv dist -s",
-    "test": "vitest run --coverage",
+    "test": "run-p test:*",
+    "test:browser": "vitest run --coverage",
+    "test:node": "cross-env TEST_ENV=node vitest run --coverage",
     "typecov": "type-coverage",
     "vercel-build": "pnpm docs:build",
     "version": "changeset version"
@@ -87,8 +88,9 @@
     "@types/react-dom": "^18.0.6",
     "@types/web": "^0.0.70",
     "c8": "^7.12.0",
+    "cross-env": "^7.0.3",
+    "edge-runtime": "1.1.0-beta.23",
     "github-markdown-css": "^5.1.0",
-    "lib-boilerplate": "link:.",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.3.0",
@@ -104,6 +106,7 @@
     "module": "./lib/index.js",
     "exports": {
       "types": "./lib/index.d.ts",
+      "browser": "./lib/browser.js",
       "import": "./lib/index.js",
       "require": "./lib/index.cjs"
     },
@@ -111,7 +114,8 @@
   },
   "size-limit": [
     {
-      "path": "lib/index.js"
+      "path": "lib/browser.js",
+      "limit": "280B"
     }
   ],
   "typeCoverage": {
