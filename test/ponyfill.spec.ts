@@ -1,8 +1,8 @@
 import { atob, btoa } from 'ab64/ponyfill'
 
-const LEGACY = 14
+const MIN = 16
 
-test.runIf(process.env.TEST_ENV !== 'node' || +process.versions.node > LEGACY)(
+test.runIf(process.env.TEST_ENV !== 'node' || +process.versions.node >= MIN)(
   'it should work same as the builtin',
   () => {
     // eslint-disable-next-line sonar/deprecation -- it's fine on browser
