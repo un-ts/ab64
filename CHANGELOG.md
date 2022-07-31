@@ -1,5 +1,11 @@
 # Change Log
 
+## 0.1.0
+
+### Minor Changes
+
+- [#5](https://github.com/un-ts/ab64/pull/5) [`a5d5d7c`](https://github.com/un-ts/ab64/commit/a5d5d7c1f514371f715d101237ce64305254604f) Thanks [@JounQin](https://github.com/JounQin)! - feat: add polyfill and ponyfill support
+
 ## 0.0.1
 
 ### Patch Changes
