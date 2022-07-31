@@ -72,9 +72,10 @@
     "lint:es": "eslint . --cache -f friendly --max-warnings 10",
     "lint:style": "stylelint . --cache",
     "lint:tsc": "tsc --noEmit",
+    "mini-app": "tsx scripts/mini-app",
     "postversion": "pnpm i --no-frozen-lockfile",
     "prepare": "simple-git-hooks",
-    "prerelease": "pnpm build",
+    "prerelease": "pnpm mini-app && pnpm build",
     "release": "changeset publish",
     "serve": "sirv dist -s",
     "test": "run-p test:*",
@@ -109,6 +110,7 @@
     "react-router-dom": "^6.3.0",
     "sirv-cli": "^2.0.2",
     "size-limit": "^8.0.0",
+    "tsx": "^3.8.0",
     "type-coverage": "^2.22.0",
     "typescript": "4.7.4",
     "unplugin-auto-import": "^0.10.3",
@@ -124,6 +126,7 @@
         "import": "./lib/index.js",
         "require": "./lib/index.cjs"
       },
+      "./mini-app": "./lib/mini-app.js",
       "./polyfill": "./lib/polyfill.js",
       "./ponyfill": "./lib/ponyfill.js"
     },
@@ -132,11 +135,15 @@
   "size-limit": [
     {
       "path": "lib/browser.js",
-      "limit": "280B"
+      "limit": "310B"
+    },
+    {
+      "path": "lib/mini-app.js",
+      "limit": "730B"
     },
     {
       "path": "lib/ponyfill.js",
-      "limit": "520B"
+      "limit": "530B"
     }
   ],
   "typeCoverage": {

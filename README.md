@@ -23,6 +23,7 @@ The smallest and fastest Base64 implementation in JavaScript based on `atob` and
     - [Basic](#basic)
     - [Polyfill](#polyfill)
     - [Ponyfill](#ponyfill)
+    - [MiniApp (WeChat)](#miniapp-wechat)
 - [Sponsors](#sponsors)
 - [Backers](#backers)
 - [Changelog](#changelog)
@@ -86,6 +87,16 @@ import { atob, btoa } from 'ab64/ponyfill'
 
 // same as browser native
 ```
+
+#### MiniApp (WeChat)
+
+Since mini app (from wechat) does not support global polyfill, so you have to use the separate `mini-app` entry instead which uses the above ponyfill inside
+
+```js
+import { decode, decodeUrl, encode, encodeUrl } from 'ab64/mini-app'
+```
+
+Or you should add an alias mapping `ab64` to `ab64/mini-app` in your `rollup`/`vite`/`webpack` configuration
 
 ## Sponsors
 

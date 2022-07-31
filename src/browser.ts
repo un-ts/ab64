@@ -1,14 +1,16 @@
 /* eslint-disable unicorn/prefer-code-point -- for smaller bundler and compatibility */
 
+import { slice } from './helper.js'
+
 const HEX = 16
 const CHUNK = 4
 
 export const decode = (val: string) =>
   decodeURIComponent(
-    [
+    slice(
       // eslint-disable-next-line sonar/deprecation -- it's fine on browser
-      ...atob(val),
-    ]
+      atob(val),
+    )
       .map(
         char => '%' + ('00' + char.charCodeAt(0)!.toString(HEX)).slice(-1 * 2),
       )

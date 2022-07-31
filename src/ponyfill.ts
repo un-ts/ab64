@@ -4,11 +4,12 @@
 
 /* eslint-disable @typescript-eslint/no-magic-numbers, unicorn/prefer-code-point -- for smaller bundler and compatibility */
 
+import { slice } from './helper.js'
+
 const b64CharList =
   'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/='
 
-const b64Chars = // type-coverage:ignore-next-line
-  (Array.prototype as string[]).slice.call(b64CharList)
+const b64Chars = slice(b64CharList)
 
 const b64Table = b64Chars.reduce<Record<string, number>>((acc, char, index) => {
   acc[char] = index

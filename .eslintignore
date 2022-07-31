@@ -2,6 +2,7 @@ coverage
 dist
 lib
 CHANGELOG.md
+/src/mini-app.ts
 /pnpm-lock.yaml
 !/.github
 !/.*.cjs
