@@ -1,5 +1,11 @@
 # Change Log
 
+## 0.1.1
+
+### Patch Changes
+
+- [#8](https://github.com/un-ts/ab64/pull/8) [`70d9af2`](https://github.com/un-ts/ab64/commit/70d9af21940b81edbe5fc150ba2b85d870522e87) Thanks [@JounQin](https://github.com/JounQin)! - feat: add `mini-app` support
+
 ## 0.1.0
 
 ### Minor Changes
