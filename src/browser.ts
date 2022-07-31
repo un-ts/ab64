@@ -1,3 +1,5 @@
+/* eslint-disable unicorn/prefer-code-point -- for smaller bundler and compatibility */
+
 const HEX = 16
 const CHUNK = 4
 
@@ -8,7 +10,7 @@ export const decode = (val: string) =>
       ...atob(val),
     ]
       .map(
-        char => '%' + ('00' + char.codePointAt(0)!.toString(HEX)).slice(-1 * 2),
+        char => '%' + ('00' + char.charCodeAt(0)!.toString(HEX)).slice(-1 * 2),
       )
       .join(''),
   )

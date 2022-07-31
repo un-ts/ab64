@@ -13,13 +13,16 @@
 [![Code Style: Prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
 [![changesets](https://img.shields.io/badge/maintained%20with-changesets-176de3.svg)](https://github.com/changesets/changesets)
 
-The smallest and fastest Base64 implementation in JavaScript
+The smallest and fastest Base64 implementation in JavaScript based on `atob` and `btoa` from browser native or `Buffer` from node
 
 ## TOC <!-- omit in toc -->
 
 - [Usage](#usage)
   - [Install](#install)
   - [API](#api)
+    - [Basic](#basic)
+    - [Polyfill](#polyfill)
+    - [Ponyfill](#ponyfill)
 - [Sponsors](#sponsors)
 - [Backers](#backers)
 - [Changelog](#changelog)
@@ -42,6 +45,8 @@ npm i ab64
 
 ### API
 
+#### Basic
+
 ```js
 import { decode, decodeUrl, encode, encodeUrl } from 'ab64'
 
@@ -60,6 +65,26 @@ decodeUrl('ZGFua29nYWk') // dankogai
 
 decode('5bCP6aO85by+') // 小飼弾
 decodeUrl('5bCP6aO85by-') // 小飼弾
+```
+
+#### Polyfill
+
+If you're running on a non Node environment where `atob` and `btoa` could be unavailable, you may want to include the `polyfill` manually
+
+```js
+import 'ab64/polyfill'
+
+// same as above then
+```
+
+#### Ponyfill
+
+`atob` and `btoa` are also available exported as `ab64/ponyfill` which does not polyfill by default
+
+```js
+import { atob, btoa } from 'ab64/ponyfill'
+
+// same as browser native
 ```
 
 ## Sponsors
