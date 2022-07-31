@@ -5,3 +5,4 @@ coverage
 dist
 lib
 node_modules
+/src/mini-app.ts
