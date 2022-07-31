@@ -25,7 +25,7 @@ jobs:
       - name: Install Dependencies
         run: pnpm i
 
-      - name: Build MiniApp entry
+      - name: Build MiniApp Entry
         run: pnpm mini-app
 
       - uses: andresz1/size-limit-action@v1

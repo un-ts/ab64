@@ -8,4 +8,7 @@ test('it should just work', () => {
 
   expect(encode('小飼弾')).toBe('5bCP6aO85by+')
   expect(encodeUrl('小飼弾')).toBe('5bCP6aO85by-')
+
+  expect(encode('𠮷野家')).toBe('8KCut+mHjuWutg==')
+  expect(encodeUrl('𠮷野家')).toBe('8KCut-mHjuWutg')
 })
