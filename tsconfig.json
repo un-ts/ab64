@@ -3,5 +3,6 @@
   "compilerOptions": {
     "rootDir": ".",
     "removeComments": true
-  }
+  },
+  "exclude": ["coverage", "dist", "lib"]
 }

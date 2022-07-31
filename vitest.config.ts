@@ -7,9 +7,16 @@ const isNode = process.env.TEST_ENV === 'node'
 
 export default defineConfig({
   resolve: {
-    alias: {
-      ab64: path.resolve(`src/${isNode ? 'index' : 'browser'}`),
-    },
+    alias: [
+      {
+        find: /^ab64$/,
+        replacement: path.resolve(`src/${isNode ? 'index' : 'browser'}`),
+      },
+      {
+        find: /^ab64\/ponyfill$/,
+        replacement: path.resolve('src/ponyfill'),
+      },
+    ],
   },
   plugins: [
     /** @see https://github.com/microsoft/TypeScript/issues/50067 */
