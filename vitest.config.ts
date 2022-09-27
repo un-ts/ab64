@@ -19,15 +19,13 @@ export default defineConfig({
     ],
   },
   plugins: [
-    /** @see https://github.com/microsoft/TypeScript/issues/50067 */
-    (
-      autoImport as unknown as typeof import('unplugin-auto-import/vite')['default']
-    )({
+    autoImport({
       imports: 'vitest',
     }),
   ],
   test: {
     coverage: {
+      provider: 'istanbul',
       reporter: ['lcov', 'json', 'text'],
     },
     environment: isNode ? 'node' : 'edge-runtime',
