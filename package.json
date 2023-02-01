@@ -64,7 +64,7 @@
     "@changesets/cli": "^2.24.4",
     "@pkgr/webpack": "^3.4.0",
     "@pkgr/webpack-mdx": "^2.2.0",
-    "@size-limit/preset-small-lib": "^8.1.0",
+    "@size-limit/preset-small-lib": "^8.1.2",
     "@types/mdx": "^2.0.3",
     "@types/node": "^18.7.23",
     "@types/react": "^18.0.26",
