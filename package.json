@@ -65,7 +65,7 @@
     "@pkgr/webpack": "^3.4.0",
     "@pkgr/webpack-mdx": "^2.2.0",
     "@size-limit/preset-small-lib": "^8.1.2",
-    "@types/mdx": "^2.0.3",
+    "@types/mdx": "^2.0.13",
     "@types/node": "^18.7.23",
     "@types/react": "^18.0.27",
     "@types/react-dom": "^18.0.10",
