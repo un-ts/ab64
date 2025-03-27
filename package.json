@@ -16,6 +16,7 @@
     "./ponyfill": "./src/ponyfill.ts"
   },
   "files": [
+    "index.d.cts",
     "lib",
     "!**/*.tsbuildinfo"
   ],
@@ -36,6 +37,7 @@
     "dev": "vitest",
     "docs:build": "vite build",
     "docs:dev": "vite dev",
+    "format": "prettier -w .",
     "lint": "run-p lint:*",
     "lint:es": "eslint . --cache --max-warnings 10",
     "lint:style": "stylelint . --cache",
@@ -48,9 +50,6 @@
     "typecov": "type-coverage",
     "vercel-build": "pnpm docs:build",
     "version": "changeset version && pnpm i --no-frozen-lockfile"
-  },
-  "dependencies": {
-    "tslib": "^2.8.1"
   },
   "devDependencies": {
     "@1stg/app-config": "^11.1.0",
@@ -74,6 +73,7 @@
     "github-markdown-css": "^5.8.1",
     "lint-staged": "^15.5.0",
     "npm-run-all2": "^7.0.2",
+    "prettier": "^3.5.3",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-router-dom": "^7.4.0",
@@ -94,14 +94,35 @@
     "module": "./lib/index.js",
     "exports": {
       ".": {
-        "types": "./lib/index.d.ts",
-        "browser": "./lib/browser.js",
-        "import": "./lib/index.js",
-        "require": "./lib/index.cjs"
+        "import": {
+          "types": "./lib/index.d.ts",
+          "default": "./lib/index.js"
+        },
+        "browser": {
+          "types": "./lib/browser.d.ts",
+          "default": "./lib/browser.js"
+        },
+        "module-sync": {
+          "types": "./lib/index.d.ts",
+          "default": "./lib/index.js"
+        },
+        "require": {
+          "types": "./index.d.cts",
+          "default": "./lib/index.cjs"
+        }
       },
-      "./mini-app": "./lib/mini-app.js",
-      "./polyfill": "./lib/polyfill.js",
-      "./ponyfill": "./lib/ponyfill.js"
+      "./mini-app": {
+        "types": "./lib/mini-app.d.ts",
+        "default": "./lib/mini-app.js"
+      },
+      "./polyfill": {
+        "types": "./lib/polyfill.d.ts",
+        "default": "./lib/polyfill.js"
+      },
+      "./ponyfill": {
+        "types": "./lib/ponyfill.d.ts",
+        "default": "./lib/ponyfill.js"
+      }
     },
     "types": "./lib/index.d.ts"
   },
