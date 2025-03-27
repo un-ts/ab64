@@ -1,5 +1,5 @@
 ---
-"@fake-scope/fake-pkg": patch
+"ab64": patch
 ---
 
 fix: add missing `package.json` entry
