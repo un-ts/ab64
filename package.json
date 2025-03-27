@@ -111,6 +111,7 @@
           "default": "./lib/index.cjs"
         }
       },
+      "./package.json": "./package.json"
       "./mini-app": {
         "types": "./lib/mini-app.d.ts",
         "default": "./lib/mini-app.js"
