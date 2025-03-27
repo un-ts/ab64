@@ -10,11 +10,11 @@ export default defineConfig({
     alias: [
       {
         find: /^ab64$/,
-        replacement: path.resolve(`src/${isNode ? 'index' : 'browser'}`),
+        replacement: path.resolve(`src/${isNode ? 'index' : 'browser'}.ts`),
       },
       {
         find: /^ab64\/ponyfill$/,
-        replacement: path.resolve('src/ponyfill'),
+        replacement: path.resolve('src/ponyfill.ts'),
       },
     ],
   },
@@ -26,7 +26,7 @@ export default defineConfig({
   test: {
     coverage: {
       provider: 'istanbul',
-      reporter: ['lcov', 'json', 'text'],
+      reporter: ['lcov', 'json'],
     },
     environment: isNode ? 'node' : 'edge-runtime',
   },
