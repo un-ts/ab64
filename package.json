@@ -50,9 +50,6 @@
     "vercel-build": "pnpm docs:build",
     "version": "changeset version && pnpm i --no-frozen-lockfile"
   },
-  "dependencies": {
-    "tslib": "^2.8.1"
-  },
   "devDependencies": {
     "@1stg/app-config": "^11.1.0",
     "@1stg/lib-config": "^13.0.1",
