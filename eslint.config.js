@@ -6,7 +6,8 @@ export default [
     ignores: ['src/mini-app.ts'],
   },
   {
-    files: ['**/src/*.ts'],
+    files: ['src/*.ts'],
+    // compatibility
     rules: {
       '@typescript-eslint/no-magic-numbers': 'off',
       '@typescript-eslint/no-unnecessary-condition': 'off',
@@ -15,6 +16,12 @@ export default [
       'sonarjs/no-nested-conditional': 'off',
       'sonarjs/regex-complexity': 'off',
       'unicorn/prefer-string-replace-all': 'off',
+    },
+  },
+  {
+    files: ['test/ponyfill.spec.ts'],
+    rules: {
+      'sonarjs/no-empty-test-file': 'off', // false positive
     },
   },
 ]
