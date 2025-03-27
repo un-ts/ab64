@@ -2,8 +2,6 @@
  * via @see https://github.com/dankogai/js-base64/blob/main/base64.ts
  */
 
-/* eslint-disable @typescript-eslint/no-magic-numbers, unicorn/prefer-code-point -- for smaller bundler and compatibility */
-
 import { slice } from './helper.js'
 
 const b64CharList =
@@ -16,10 +14,7 @@ const b64Table = b64Chars.reduce<Record<string, number>>((acc, char, index) => {
   return acc
 }, {})
 
-const b64Regexp =
-  /^(?:[\d+/A-Za-z]{4})*?(?:[\d+/A-Za-z]{2}(?:==)?|[\d+/A-Za-z]{3}=?)?$/
-
-const fromCharCode = String.fromCharCode.bind(String)
+const b64Regexp = /^(?:[\d+/a-z]{4})*?(?:[\d+/a-z]{2}(?:==)?|[\d+/a-z]{3}=?)?$/i
 
 export const atob = (asc: string) => {
   asc = asc.replace(/\s+/g, '')
@@ -43,10 +38,10 @@ export const atob = (asc: string) => {
       (r2 = b64Table[asc.charAt(i++)])
     binary +=
       r1 === 64
-        ? fromCharCode((u24 >> 16) & 255)
+        ? String.fromCodePoint((u24 >> 16) & 255)
         : r2 === 64
-        ? fromCharCode((u24 >> 16) & 255, (u24 >> 8) & 255)
-        : fromCharCode((u24 >> 16) & 255, (u24 >> 8) & 255, u24 & 255)
+          ? String.fromCodePoint((u24 >> 16) & 255, (u24 >> 8) & 255)
+          : String.fromCodePoint((u24 >> 16) & 255, (u24 >> 8) & 255, u24 & 255)
   }
 
   return binary
@@ -64,9 +59,9 @@ export const btoa = (binary: string) => {
 
   for (let i = 0; i < binary.length; ) {
     if (
-      (c0 = binary.charCodeAt(i++)) > 255 ||
-      (c1 = binary.charCodeAt(i++)) > 255 ||
-      (c2 = binary.charCodeAt(i++)) > 255
+      (c0 = binary.codePointAt(i++)!) > 255 ||
+      (c1 = binary.codePointAt(i++)!) > 255 ||
+      (c2 = binary.codePointAt(i++)!) > 255
     ) {
       throw new TypeError('invalid character found')
     }

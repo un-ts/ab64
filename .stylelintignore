@@ -2,8 +2,11 @@ coverage
 dist
 lib
 LICENSE
+*.js
 *.json
 *.log
 *.patch
+*.ts
+*.tsx
 *.yaml
 *.yml

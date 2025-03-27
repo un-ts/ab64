@@ -7,7 +7,7 @@
   "author": "JounQin (https://www.1stG.me) <admin@1stg.me>",
   "funding": "https://opencollective.com/unts",
   "license": "MIT",
-  "packageManager": "pnpm@7.12.2",
+  "packageManager": "pnpm@10.7.0",
   "engines": {
     "node": "^12.20.0 || ^14.18.0 || >=16.0.0"
   },
@@ -33,57 +33,63 @@
     "build": "run-p build:*",
     "build:r": "r -f cjs",
     "build:tsc": "tsc -p src",
-    "codesandbox:install": "yarn",
     "dev": "vitest",
-    "docs:build": "w -e docs -p --publicPath /",
-    "docs:dev": "w -e docs",
+    "docs:build": "vite build",
+    "docs:dev": "vite dev",
     "lint": "run-p lint:*",
-    "lint:es": "eslint . --cache -f friendly --max-warnings 10",
+    "lint:es": "eslint . --cache --max-warnings 10",
     "lint:style": "stylelint . --cache",
     "lint:tsc": "tsc --noEmit",
     "mini-app": "tsx scripts/mini-app",
-    "postversion": "pnpm i --no-frozen-lockfile",
     "prepare": "simple-git-hooks",
-    "prerelease": "pnpm mini-app && pnpm build",
-    "release": "changeset publish",
+    "release": "pnpm mini-app && pnpm build && clean-pkg-json && changeset publish",
     "serve": "sirv dist -s",
-    "test": "run-p test:*",
+    "test": "run-s test:*",
     "test:browser": "vitest run --coverage",
-    "test:node": "cross-env TEST_ENV=node vitest run --coverage",
+    "test:node": "cross-env TEST_ENV=node pnpm test:browser",
     "typecov": "type-coverage",
     "vercel-build": "pnpm docs:build",
-    "version": "changeset version"
+    "version": "changeset version && pnpm i --no-frozen-lockfile"
   },
   "dependencies": {
-    "tslib": "^2.4.0"
+    "tslib": "^2.8.1"
   },
   "devDependencies": {
-    "@1stg/app-config": "^7.3.0",
-    "@1stg/lib-config": "^10.3.0",
-    "@changesets/changelog-github": "^0.4.6",
-    "@changesets/cli": "^2.24.4",
-    "@pkgr/webpack": "^3.4.0",
-    "@pkgr/webpack-mdx": "^2.2.0",
-    "@size-limit/preset-small-lib": "^8.1.0",
-    "@types/mdx": "^2.0.2",
-    "@types/node": "^18.7.23",
-    "@types/react": "^18.0.21",
-    "@types/react-dom": "^18.0.6",
-    "@types/web": "^0.0.75",
-    "@vitest/coverage-istanbul": "^0.23.4",
+    "@1stg/app-config": "^11.1.0",
+    "@1stg/lib-config": "^13.0.1",
+    "@changesets/changelog-github": "^0.5.1",
+    "@changesets/cli": "^2.28.1",
+    "@commitlint/cli": "^19.8.0",
+    "@mdx-js/rollup": "^3.1.0",
+    "@size-limit/preset-small-lib": "^11.2.0",
+    "@types/mdx": "^2.0.13",
+    "@types/node": "^22.13.14",
+    "@types/react": "^19.0.12",
+    "@types/react-dom": "^19.0.4",
+    "@types/web": "^0.0.214",
+    "@vitejs/plugin-react-swc": "^3.8.1",
+    "@vitest/coverage-istanbul": "^3.0.9",
+    "clean-pkg-json": "^1.2.1",
     "cross-env": "^7.0.3",
-    "edge-runtime": "1.1.0-beta.31",
-    "github-markdown-css": "^5.1.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-router-dom": "^6.4.1",
-    "sirv-cli": "^2.0.2",
-    "size-limit": "^8.1.0",
-    "tsx": "^3.9.0",
-    "type-coverage": "^2.22.0",
-    "typescript": "~4.7.4",
-    "unplugin-auto-import": "^0.11.2",
-    "vitest": "^0.23.4"
+    "edge-runtime": "4.0.1",
+    "eslint": "^9.23.0",
+    "github-markdown-css": "^5.8.1",
+    "lint-staged": "^15.5.0",
+    "npm-run-all2": "^7.0.2",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-router-dom": "^7.4.0",
+    "remark-gfm": "^4.0.1",
+    "simple-git-hooks": "^2.12.1",
+    "sirv-cli": "^3.0.1",
+    "size-limit": "^11.2.0",
+    "stylelint": "^16.17.0",
+    "tsx": "^4.19.3",
+    "type-coverage": "^2.29.7",
+    "typescript": "~5.8.2",
+    "unplugin-auto-import": "^19.1.2",
+    "vite": "^6.2.3",
+    "vitest": "^3.0.9"
   },
   "publishConfig": {
     "main": "./lib/index.cjs",
@@ -101,18 +107,34 @@
     },
     "types": "./lib/index.d.ts"
   },
+  "pnpm": {
+    "overrides": {
+      "@types/node": "^22.13.14",
+      "es5-ext": "npm:@unes/es5-ext@^0.10.64-1",
+      "prettier": "^3.5.3"
+    },
+    "ignoredBuiltDependencies": [
+      "@parcel/watcher",
+      "@swc/core",
+      "core-js",
+      "es5-ext",
+      "esbuild",
+      "nodent-runtime",
+      "simple-git-hooks"
+    ]
+  },
   "size-limit": [
     {
       "path": "lib/browser.js",
-      "limit": "310B"
+      "limit": "300B"
     },
     {
       "path": "lib/mini-app.js",
-      "limit": "730B"
+      "limit": "700B"
     },
     {
       "path": "lib/ponyfill.js",
-      "limit": "530B"
+      "limit": "500B"
     }
   ],
   "typeCoverage": {
