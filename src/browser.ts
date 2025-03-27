@@ -34,9 +34,6 @@ export const decodeUrl = (val: string) => {
       output += '='
       break
     }
-    default: {
-      break
-    }
   }
   return decode(output)
 }

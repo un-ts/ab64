@@ -16,6 +16,7 @@
     "./ponyfill": "./src/ponyfill.ts"
   },
   "files": [
+    "index.d.cts",
     "lib",
     "!**/*.tsbuildinfo"
   ],
@@ -94,14 +95,35 @@
     "module": "./lib/index.js",
     "exports": {
       ".": {
-        "types": "./lib/index.d.ts",
-        "browser": "./lib/browser.js",
-        "import": "./lib/index.js",
-        "require": "./lib/index.cjs"
+        "import": {
+          "types": "./lib/index.d.ts",
+          "default": "./lib/index.js"
+        },
+        "browser": {
+          "types": "./lib/browser.d.ts",
+          "default": "./lib/browser.js"
+        },
+        "module-sync": {
+          "types": "./lib/index.d.ts",
+          "default": "./lib/index.js"
+        },
+        "require": {
+          "types": "./index.d.cts",
+          "default": "./lib/index.cjs"
+        }
       },
-      "./mini-app": "./lib/mini-app.js",
-      "./polyfill": "./lib/polyfill.js",
-      "./ponyfill": "./lib/ponyfill.js"
+      "./mini-app": {
+        "types": "./lib/mini-app.d.ts",
+        "default": "./lib/mini-app.js"
+      },
+      "./polyfill": {
+        "types": "./lib/polyfill.d.ts",
+        "default": "./lib/polyfill.js"
+      },
+      "./ponyfill": {
+        "types": "./lib/ponyfill.d.ts",
+        "default": "./lib/ponyfill.js"
+      }
     },
     "types": "./lib/index.d.ts"
   },
