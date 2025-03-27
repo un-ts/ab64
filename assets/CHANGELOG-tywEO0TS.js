@@ -1,4 +1,9 @@
-import{j as n}from"./index-IfMBbXY-.js";function c(e){const h={a:"a",code:"code",h1:"h1",h2:"h2",h3:"h3",li:"li",ul:"ul",...e.components};return n.jsxs(n.Fragment,{children:[n.jsx(h.h1,{children:"Change Log"}),`
+import{j as n}from"./index-ChV9ngel.js";function c(e){const h={a:"a",code:"code",h1:"h1",h2:"h2",h3:"h3",li:"li",ul:"ul",...e.components};return n.jsxs(n.Fragment,{children:[n.jsx(h.h1,{children:"Change Log"}),`
+`,n.jsx(h.h2,{children:"0.1.3"}),`
+`,n.jsx(h.h3,{children:"Patch Changes"}),`
+`,n.jsxs(h.ul,{children:[`
+`,n.jsxs(h.li,{children:[n.jsx(h.a,{href:"https://github.com/un-ts/ab64/pull/41",children:"#41"})," ",n.jsx(h.a,{href:"https://github.com/un-ts/ab64/commit/2c7de4d6a13ee883fd1aca0cbaedcd1eaf357cf2",children:n.jsx(h.code,{children:"2c7de4d"})})," Thanks ",n.jsx(h.a,{href:"https://github.com/JounQin",children:"@JounQin"}),"! - fix: commonjs types, add ",n.jsx(h.code,{children:"module-sync"})," entry"]}),`
+`]}),`
 `,n.jsx(h.h2,{children:"0.1.2"}),`
 `,n.jsx(h.h3,{children:"Patch Changes"}),`
 `,n.jsxs(h.ul,{children:[`
@@ -18,4 +23,4 @@ import{j as n}from"./index-IfMBbXY-.js";function c(e){const h={a:"a",code:"code"
 `,n.jsx(h.h3,{children:"Patch Changes"}),`
 `,n.jsxs(h.ul,{children:[`
 `,n.jsxs(h.li,{children:[n.jsx(h.a,{href:"https://github.com/un-ts/ab64/pull/3",children:"#3"})," ",n.jsx(h.a,{href:"https://github.com/un-ts/ab64/commit/b5d576bd65769f7f135205ad114499b3d0a683d8",children:n.jsx(h.code,{children:"b5d576b"})})," Thanks ",n.jsx(h.a,{href:"https://github.com/JounQin",children:"@JounQin"}),"! - chore: add keywords"]}),`
-`]})]})}function i(e={}){const{wrapper:h}=e.components||{};return h?n.jsx(h,{...e,children:n.jsx(c,{...e})}):c(e)}export{i as default};
+`]})]})}function d(e={}){const{wrapper:h}=e.components||{};return h?n.jsx(h,{...e,children:n.jsx(c,{...e})}):c(e)}export{d as default};
