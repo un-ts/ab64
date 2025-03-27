@@ -1,5 +1,11 @@
 # Change Log
 
+## 0.1.2
+
+### Patch Changes
+
+- [#37](https://github.com/un-ts/ab64/pull/37) [`6c2c68e`](https://github.com/un-ts/ab64/commit/6c2c68eea6acca813389dc86e625cd7acebdcb21) Thanks [@JounQin](https://github.com/JounQin)! - chore: housekeeping, bump all (dev) deps
+
 ## 0.1.1
 
 ### Patch Changes
