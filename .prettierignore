@@ -1,4 +1,5 @@
 coverage
 dist
+/auto-imports.d.ts
 /src/mini-app.ts
 /pnpm-lock.yaml

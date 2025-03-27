@@ -2,6 +2,7 @@ coverage
 dist
 lib
 LICENSE
+*.cts
 *.js
 *.json
 *.log
