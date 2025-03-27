@@ -1,5 +1,11 @@
 # Change Log
 
+## 0.1.3
+
+### Patch Changes
+
+- [#41](https://github.com/un-ts/ab64/pull/41) [`2c7de4d`](https://github.com/un-ts/ab64/commit/2c7de4d6a13ee883fd1aca0cbaedcd1eaf357cf2) Thanks [@JounQin](https://github.com/JounQin)! - fix: commonjs types, add `module-sync` entry
+
 ## 0.1.2
 
 ### Patch Changes
