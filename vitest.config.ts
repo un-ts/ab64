@@ -3,15 +3,9 @@ import path from 'node:path'
 import autoImport from 'unplugin-auto-import/vite'
 import { defineConfig } from 'vitest/config'
 
-const isNode = process.env.TEST_ENV === 'node'
-
 export default defineConfig({
   resolve: {
     alias: [
-      {
-        find: /^ab64$/,
-        replacement: path.resolve(`src/${isNode ? 'index' : 'browser'}.ts`),
-      },
       {
         find: /^ab64\/ponyfill$/,
         replacement: path.resolve('src/ponyfill.ts'),
@@ -28,6 +22,37 @@ export default defineConfig({
       provider: 'istanbul',
       reporter: ['lcov', 'json'],
     },
-    environment: isNode ? 'node' : 'edge-runtime',
+    workspace: [
+      {
+        extends: true,
+        resolve: {
+          alias: [
+            {
+              find: /^ab64$/,
+              replacement: path.resolve('src/index.ts'),
+            },
+          ],
+        },
+        test: {
+          name: 'node',
+          environment: 'node',
+        },
+      },
+      {
+        extends: true,
+        resolve: {
+          alias: [
+            {
+              find: /^ab64$/,
+              replacement: path.resolve('src/browser.ts'),
+            },
+          ],
+        },
+        test: {
+          name: 'browser',
+          environment: 'edge-runtime',
+        },
+      },
+    ],
   },
 })

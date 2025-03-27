@@ -44,9 +44,7 @@
     "prepare": "simple-git-hooks",
     "release": "pnpm mini-app && pnpm build && clean-pkg-json && changeset publish",
     "serve": "sirv dist -s",
-    "test": "run-s test:*",
-    "test:browser": "vitest run --coverage",
-    "test:node": "cross-env TEST_ENV=node pnpm test:browser",
+    "test": "vitest run --coverage",
     "typecov": "type-coverage",
     "vercel-build": "pnpm docs:build",
     "version": "changeset version && pnpm i --no-frozen-lockfile"
