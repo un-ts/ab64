@@ -1,6 +1,6 @@
 {
   "name": "ab64",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "type": "module",
   "description": "The smallest and fastest Base64 implementation in JavaScript",
   "repository": "https://github.com/un-ts/ab64.git",

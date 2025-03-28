@@ -1,5 +1,11 @@
 # Change Log
 
+## 0.1.5
+
+### Patch Changes
+
+- [#45](https://github.com/un-ts/ab64/pull/45) [`43c4c5f`](https://github.com/un-ts/ab64/commit/43c4c5fd5543d7c9622fce4c841cc3e6d797de81) Thanks [@JounQin](https://github.com/JounQin)! - refactor: better types without `as` assertion
+
 ## 0.1.4
 
 ### Patch Changes
