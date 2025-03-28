@@ -48,7 +48,6 @@
     "serve": "sirv dist -s",
     "test": "vitest run --coverage",
     "typecov": "type-coverage",
-    "vercel-build": "pnpm docs:build",
     "version": "changeset version && pnpm i --no-frozen-lockfile"
   },
   "devDependencies": {
