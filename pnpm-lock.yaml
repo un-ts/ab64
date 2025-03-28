@@ -49,6 +49,9 @@ importers:
       '@types/web':
         specifier: ^0.0.214
         version: 0.0.214
+      '@vercel/analytics':
+        specifier: ^1.5.0
+        version: 1.5.0(react@19.0.0)
       '@vitejs/plugin-react-swc':
         specifier: ^3.8.1
         version: 3.8.1(vite@6.2.3(@types/node@22.13.14)(jiti@2.4.2)(less@4.2.2)(sass@1.86.0)(stylus@0.59.0)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.0))
@@ -2448,6 +2451,32 @@ packages:
     resolution: {integrity: sha512-XBWpUP0mHya6yGBwNefhyEa6V7HgYKCxEAY4qhTm/PcAQyBPNmjj97VZJOJkVdUsyuuii7xmq0pXWX/c2aToHQ==}
     cpu: [x64]
     os: [win32]
+
+  '@vercel/analytics@1.5.0':
+    resolution: {integrity: sha512-MYsBzfPki4gthY5HnYN7jgInhAZ7Ac1cYDoRWFomwGHWEX7odTEzbtg9kf/QSo7XEsEAqlQugA6gJ2WS2DEa3g==}
+    peerDependencies:
+      '@remix-run/react': ^2
+      '@sveltejs/kit': ^1 || ^2
+      next: '>= 13'
+      react: ^18 || ^19 || ^19.0.0-rc
+      svelte: '>= 4'
+      vue: ^3
+      vue-router: ^4
+    peerDependenciesMeta:
+      '@remix-run/react':
+        optional: true
+      '@sveltejs/kit':
+        optional: true
+      next:
+        optional: true
+      react:
+        optional: true
+      svelte:
+        optional: true
+      vue:
+        optional: true
+      vue-router:
+        optional: true
 
   '@vitejs/plugin-react-swc@3.8.1':
     resolution: {integrity: sha512-aEUPCckHDcFyxpwFm0AIkbtv6PpUp3xTb9wYGFjtABynXjCYKkWoxX0AOK9NT9XCrdk6mBBUOeHQS+RKdcNO1A==}
@@ -10326,6 +10355,10 @@ snapshots:
 
   '@unrs/resolver-binding-win32-x64-msvc@1.3.2':
     optional: true
+
+  '@vercel/analytics@1.5.0(react@19.0.0)':
+    optionalDependencies:
+      react: 19.0.0
 
   '@vitejs/plugin-react-swc@3.8.1(vite@6.2.3(@types/node@22.13.14)(jiti@2.4.2)(less@4.2.2)(sass@1.86.0)(stylus@0.59.0)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.0))':
     dependencies:
