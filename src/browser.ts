@@ -1,4 +1,4 @@
-import { slice } from './helper.js'
+import { slice } from './helpers.js'
 
 const HEX = 16
 const CHUNK = 4

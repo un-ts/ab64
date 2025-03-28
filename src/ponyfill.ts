@@ -2,7 +2,7 @@
  * via @see https://github.com/dankogai/js-base64/blob/main/base64.ts
  */
 
-import { slice } from './helper.js'
+import { slice } from './helpers.js'
 
 const b64CharList =
   'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/='
