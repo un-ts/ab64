@@ -1,4 +1,9 @@
-import{j as n}from"./index-ChV9ngel.js";function c(e){const h={a:"a",code:"code",h1:"h1",h2:"h2",h3:"h3",li:"li",ul:"ul",...e.components};return n.jsxs(n.Fragment,{children:[n.jsx(h.h1,{children:"Change Log"}),`
+import{j as n}from"./index-Ln9-3d-e.js";function c(e){const h={a:"a",code:"code",h1:"h1",h2:"h2",h3:"h3",li:"li",ul:"ul",...e.components};return n.jsxs(n.Fragment,{children:[n.jsx(h.h1,{children:"Change Log"}),`
+`,n.jsx(h.h2,{children:"0.1.4"}),`
+`,n.jsx(h.h3,{children:"Patch Changes"}),`
+`,n.jsxs(h.ul,{children:[`
+`,n.jsxs(h.li,{children:[n.jsx(h.a,{href:"https://github.com/un-ts/ab64/pull/43",children:"#43"})," ",n.jsx(h.a,{href:"https://github.com/un-ts/ab64/commit/6403d7f93654bcbdd72132864b5316796649c49d",children:n.jsx(h.code,{children:"6403d7f"})})," Thanks ",n.jsx(h.a,{href:"https://github.com/JounQin",children:"@JounQin"}),"! - fix: add missing ",n.jsx(h.code,{children:"package.json"})," entry"]}),`
+`]}),`
 `,n.jsx(h.h2,{children:"0.1.3"}),`
 `,n.jsx(h.h3,{children:"Patch Changes"}),`
 `,n.jsxs(h.ul,{children:[`
