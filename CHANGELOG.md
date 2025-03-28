@@ -1,5 +1,11 @@
 # Change Log
 
+## 0.1.4
+
+### Patch Changes
+
+- [#43](https://github.com/un-ts/ab64/pull/43) [`6403d7f`](https://github.com/un-ts/ab64/commit/6403d7f93654bcbdd72132864b5316796649c49d) Thanks [@JounQin](https://github.com/JounQin)! - fix: add missing `package.json` entry
+
 ## 0.1.3
 
 ### Patch Changes
