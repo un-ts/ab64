@@ -24,8 +24,9 @@ The smallest and fastest Base64 implementation in JavaScript based on `atob` and
     - [Polyfill](#polyfill)
     - [Ponyfill](#ponyfill)
     - [MiniApp (WeChat)](#miniapp-wechat)
-- [Sponsors](#sponsors)
-- [Backers](#backers)
+- [Sponsors and Backers](#sponsors-and-backers)
+  - [Sponsors](#sponsors)
+  - [Backers](#backers)
 - [Changelog](#changelog)
 - [License](#license)
 
@@ -98,15 +99,17 @@ import { decode, decodeUrl, encode, encodeUrl } from 'ab64/mini-app'
 
 Or you should add an alias mapping `ab64` to `ab64/mini-app` in your `rollup`/`vite`/`webpack` configuration
 
+## Sponsors and Backers
+
 [![Sponsors](https://raw.githubusercontent.com/1stG/static/master/sponsors.svg)](https://github.com/sponsors/JounQin)
 
-## Sponsors
+### Sponsors
 
 | 1stG                                                                                                                   | RxTS                                                                                                                   | UnTS                                                                                                                   |
 | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
 | [![1stG Open Collective sponsors](https://opencollective.com/1stG/organizations.svg)](https://opencollective.com/1stG) | [![RxTS Open Collective sponsors](https://opencollective.com/rxts/organizations.svg)](https://opencollective.com/rxts) | [![UnTS Open Collective sponsors](https://opencollective.com/unts/organizations.svg)](https://opencollective.com/unts) |
 
-## Backers
+### Backers
 
 | 1stG                                                                                                                | RxTS                                                                                                                | UnTS                                                                                                                |
 | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
