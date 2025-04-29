@@ -7,7 +7,7 @@
   "author": "JounQin (https://www.1stG.me) <admin@1stg.me>",
   "funding": "https://opencollective.com/unts",
   "license": "MIT",
-  "packageManager": "pnpm@10.8.0",
+  "packageManager": "pnpm@10.10.0",
   "engines": {
     "node": "^12.20.0 || ^14.18.0 || >=16.0.0"
   },
