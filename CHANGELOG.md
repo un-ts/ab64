@@ -1,5 +1,11 @@
 # Change Log
 
+## 0.1.6
+
+### Patch Changes
+
+- [#55](https://github.com/un-ts/ab64/pull/55) [`3647d8b`](https://github.com/un-ts/ab64/commit/3647d8b7b23ddd9780da48ece85fd595b6773c5c) Thanks [@JounQin](https://github.com/JounQin)! - fix: split `browser` in `import` condition
+
 ## 0.1.5
 
 ### Patch Changes
