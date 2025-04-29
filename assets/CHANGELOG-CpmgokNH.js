@@ -1,4 +1,4 @@
-import{j as n}from"./index-DIqr2mWz.js";function e(c){const h={a:"a",code:"code",h1:"h1",h2:"h2",h3:"h3",li:"li",ul:"ul",...c.components};return n.jsxs(n.Fragment,{children:[n.jsx(h.h1,{children:"Change Log"}),`
+import{j as n}from"./index-kb_DFtxp.js";function e(c){const h={a:"a",code:"code",h1:"h1",h2:"h2",h3:"h3",li:"li",ul:"ul",...c.components};return n.jsxs(n.Fragment,{children:[n.jsx(h.h1,{children:"Change Log"}),`
 `,n.jsx(h.h2,{children:"0.1.6"}),`
 `,n.jsx(h.h3,{children:"Patch Changes"}),`
 `,n.jsxs(h.ul,{children:[`
