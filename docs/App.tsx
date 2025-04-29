@@ -4,23 +4,21 @@ import { Route, BrowserRouter as Router, Routes } from 'react-router-dom'
 import './global.scss'
 import 'github-markdown-css'
 
-const Readme = () => {
-  const Readme = lazy(() => import('../README.md'))
-  return (
-    <Suspense>
-      <Readme />
-    </Suspense>
-  )
-}
+const Readme_ = lazy(() => import('../README.md'))
 
-const Changelog = () => {
-  const Changelog = lazy(() => import('../CHANGELOG.md'))
-  return (
-    <Suspense>
-      <Changelog />
-    </Suspense>
-  )
-}
+const Readme = () => (
+  <Suspense>
+    <Readme_ />
+  </Suspense>
+)
+
+const Changelog_ = lazy(() => import('../CHANGELOG.md'))
+
+const Changelog = () => (
+  <Suspense>
+    <Changelog_ />
+  </Suspense>
+)
 
 export const App = () => (
   <Router>
