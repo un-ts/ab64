@@ -30,7 +30,7 @@ export const atob = (asc: string) => {
   let r1: number
   let r2: number
 
-  for (let i = 0; i < asc.length; ) {
+  for (let i = 0; i < asc.length;) {
     u24 =
       (b64Table[asc.charAt(i++)] << 18) |
       (b64Table[asc.charAt(i++)] << 12) |
@@ -57,7 +57,7 @@ export const btoa = (binary: string) => {
 
   const pad = binary.length % 3
 
-  for (let i = 0; i < binary.length; ) {
+  for (let i = 0; i < binary.length;) {
     if (
       (c0 = binary.codePointAt(i++)!) > 255 ||
       (c1 = binary.codePointAt(i++)!) > 255 ||
